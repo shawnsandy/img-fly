@@ -16,10 +16,12 @@ class ImgController extends Controller
 	public function __invoke($dir, $photo)
 			{
 		$server = ServerFactory::create([
+			'response' => new LaravelResponseFactory(app('request')),
 			'source' => "./$dir/",
 			'cache' =>  "$dir/",
-			'source_path_prefix' => '/'. $dir,
+			'source_path_prefix' => '/',
 			'cache_path_prefix' => '/.cache',
+			'base_url' => '/public/'
 			]);
 		return $server->outputImage($photo, request()->all());
 	}
