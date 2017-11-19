@@ -36,7 +36,7 @@ Via composer repository
 composer require shawnsandy/img-fly
 ```
 
-### If you are running php  5.4 or eariler
+### If you are running Laravel  5.4 or eariler
 
 * Add the provider to your `config\app.php` providers.
 
@@ -50,13 +50,17 @@ ShawnSandy\ImgFly\ImgflyServiceProvider::class,
 "Imgfly" => ShawnSandy\ImgFly\Classes\ImgflyFacade::class,
 ```
 
+### Routes
+
 * Add the route to your `routes\web.php`
 
 ```
 Imgfly::routes();
 ```
 
-### Install the php league Laravel glide package [Info and Instructions](https://github.com/thephpleague/glide-laravel)
+### Dependencies (required)
+
+- Install the php league Laravel glide package [Info and Instructions](https://github.com/thephpleague/glide-laravel)
 ```
 composer require league/glide-laravel
 ```
