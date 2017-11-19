@@ -1,0 +1,32 @@
+{
+    "name": "shawnsandy/img-fly",
+    "description": "Dynamically resize images on the Fly",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "5.*",
+        "league/glide-laravel": "1.*"
+    },
+    "author": {
+        "name": "shawn sandy ",
+        "email": "shawnsandy04@gmail.com"
+    },
+    "autoload": {
+        "psr-4": {
+            "ShawnSandy\\ImgFly\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ShawnSandy\\ImgFly\\Img-flyServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true
+    }
+}
