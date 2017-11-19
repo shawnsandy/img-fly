@@ -1,6 +1,19 @@
 # shawnsandy/img-fly
 
-Dynamically resize images on the Fly
+Dynamically resize images on the Fly using the [Glide library from thephpleague](http://glide.thephpleague.com/).
+
+	Glide is a wonderfully easy on-demand image manipulation library written in PHP. Its straightforward API is exposed via HTTP, similar to cloud image processing services like Imgix and Cloudinary. Glide leverages powerful libraries like Intervention Image (for image handling and manipulation) and Flysystem (for file system abstraction).
+
+- Adjust, resize and add effects to images using a simple HTTP based API.
+- Manipulated images are automatically cached and served with far-future expires headers.
+- Create your own image processing server or integrate Glide directly into your app.
+- Supports both the GD library and the Imagick PHP extension.
+- Supports many response methods, including PSR-7, HttpFoundation and more.
+- Ability to secure image URLs using HTTP signatures.
+- Works with many different file systems, thanks to the Flysystem library.
+- Powered by the battle tested Intervention Image image handling and manipulation library.
+- Framework-agnostic, will work with any project.
+- Composer ready and PSR-2 compliant.
 
 ## Install Glide Laravel
 
@@ -52,14 +65,15 @@ composer require league/glide-laravel
 
 * Display and resize an image from your Storage folder `storage/app/images` directory `w=500` sets the image width to `500`.
 
-``` php
-Imgfly::imgFly('images/apple-mouse.jpeg?w=500')
+
+``` html
+<img src="{{ Imgfly::imgFly('apple-mouse.jpeg?w=500') }}" alt="">
 ```
 
 * Display and resize an image from your `public/img` directory `w=500` sets the image width parameter to `500`. Read more on setting additional parameters (height, crop, orientation) [Glide quick reference](http://glide.thephpleague.com/1.0/api/quick-reference/).
 
-``` php
-Imgfly::imgPublic('hands.jpg?w=500', 'img')
+``` html
+<img src="{{ Imgfly::imgPublic('hands.jpeg?w=500', 'img) }}" alt="">
 ```
 
 ## Testing
