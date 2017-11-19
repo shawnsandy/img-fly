@@ -20,8 +20,11 @@
     "extra": {
         "laravel": {
             "providers": [
-                "ShawnSandy\\ImgFly\\Img-flyServiceProvider"
-            ]
+                "ShawnSandy\\ImgFly\\ImgflyServiceProvider"
+            ],
+            "aliases": {
+                "Imgfly": "ShawnSandy\\ImgFly\\Classes\\ImgflyFacade"
+            }
         }
     },
     "config": {
