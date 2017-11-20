@@ -1,3 +1,5 @@
+![Screenshot](/screenshot.jpeg)
+
 # shawnsandy/img-fly
 
 Dynamically resize images on the Fly in your Laravel App using the [Glide library from thephpleague](http://glide.thephpleague.com/).
