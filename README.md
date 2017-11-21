@@ -39,7 +39,7 @@ Via composer repository
 composer require shawnsandy/img-fly
 ```
 
-### If you are running Laravel  5.4 or eariler, in Laravel 5.5 and higher the package automatically installs itself
+### In Laravel 5.5 and higher the package automatically installs itself. If you are running Laravel  5.4 or earlier please follow the instructions below.
 
 * Add the provider to your `config\app.php` providers.
 
