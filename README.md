@@ -83,6 +83,45 @@ composer require league/glide-laravel
 <img src="{{ Imgfly::imgPublic('hands.jpeg?w=500', 'img) }}" alt="">
 ```
 
+### Presets
+
+You can also use preset img parameters in the config `app/imgfly.php` to dynamically resize image on the fly.
+
+- Publish the config filr
+
+
+``` text
+php artisan vendor:publish --tag=imgfly_config
+```
+
+- Open and modify the presets
+
+``` php
+[
+
+    "icon" => "?w=60&h=60&fit=crop-center",
+
+    "small" => "?w=100&h=100&fit=crop-center",
+
+    "thumbnail" => "?w=200&h=200&fit=crop-center",
+
+    "medium" => "?w=600&h=400&fit=crop-center",
+
+    "large" => "?w=1200&h=600&fit=crop-center",
+
+];
+```
+
+- Call the facade `Imgfly::imgPreset(image, preset_key = small, callBackMethod = 'img/imgPublic')` 
+
+- Examples
+
+``` blade
+<img src="{{ Imgfly::imgPreset('hands.jpg', 'icon') }}" alt="">
+<img src="{{ Imgfly::imgPreset('hands.jpg', 'small') }}" alt="">
+<img src="{{ Imgfly::imgPreset('hands.jpg', 'thumbnail') }}" alt="">
+```
+
 ## Testing
 
 ``` bash
