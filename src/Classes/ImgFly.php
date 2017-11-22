@@ -51,16 +51,16 @@ class ImgFly
 
     /**
      * @param string $preset
-     * @param null|string $storageMethod
+     * @param null|string $callBackMethod
      * @return mixed
      */
-    public function imgPreset($img, $preset = 'small', $storageMethod = 'img')
+    public function imgPreset($img, $preset = 'small', $callBackMethod = 'img')
     {
 
 
         $parameters = config("imgfly.{$preset}");
 
-      return  call_user_func([$this, $storageMethod], $img.$parameters);
+      return  call_user_func([$this, $callBackMethod], $img.$parameters);
 
     }
 
