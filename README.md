@@ -114,7 +114,6 @@ php artisan vendor:publish --tag=imgfly_config
 
 - Call the facade `Imgfly::imgPreset(image, preset_key = small, callBackMethod = 'img/imgPublic')` 
 
-- Examples
 
 ``` blade
 <img src="{{ Imgfly::imgPreset('hands.jpg', 'icon') }}" alt="">
