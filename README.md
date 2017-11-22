@@ -1,8 +1,8 @@
 ![Screenshot](/screenshot.jpeg)
 
-# ImgFly
+# Laravel ImgFly 
 
-Dynamically resize images on the Fly in your Laravel App using the [Glide library from thephpleague](http://glide.thephpleague.com/).
+### Dynamically resize images on the Fly in your Laravel App using the [Glide library from thephpleague](http://glide.thephpleague.com/).
 
 > Glide is a wonderfully easy on-demand image manipulation library written in PHP. Its straightforward API is exposed via HTTP, similar to cloud image processing services like Imgix and Cloudinary. Glide leverages powerful libraries like Intervention Image (for image handling and manipulation) and Flysystem (for file system abstraction).
 
@@ -85,9 +85,9 @@ composer require league/glide-laravel
 
 ### Presets
 
-You can also use preset img parameters in the config `app/imgfly.php` to dynamically resize image on the fly.
+You can also use preset to dynamically resize image on the fly. Parameters are set in the config `app/imgfly.php` 
 
-- Publish the config filr
+- Publish the config file
 
 
 ``` text
