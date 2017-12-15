@@ -21,7 +21,7 @@ class ImgflyServiceProvider extends ServiceProvider
             __DIR__.'/Config/imgfly.php' => config_path('imgfly.php'),
         ], 'imgfly_config');
 
-        $this->loadMigrationsFrom(__DIR__ . '/Migrations');
+        // $this->loadMigrationsFrom(__DIR__ . '/Migrations');
 
         $this->loadTranslationsFrom(__DIR__ . '/Translations', 'imgfly');
 
