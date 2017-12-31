@@ -46,7 +46,19 @@ class ImgFly
      */
     public function imgPublic($image_str, $dir = 'img')
     {
-        return url("imgfly/public/$dir/$image_str");
+        return $this->loadImg("public/$dir", $image_str);
+    }
+
+    /**
+     * Load image create a full url to the image page
+     *
+     * @param string $path
+     * @param string $image default path with url parameters
+     * @return void
+     */
+    public function loadImg($path, $image_string)
+    {
+        return url("/imgfly/$path/$image_string");
     }
 
     /**
@@ -56,12 +68,8 @@ class ImgFly
      */
     public function imgPreset($img, $preset = 'small', $callBackMethod = 'img')
     {
-
-
-        $parameters = config("imgfly.{$preset}");
-
+      $parameters = config("imgfly.{$preset}");
       return  call_user_func([$this, $callBackMethod], $img.$parameters);
-
     }
 
 
