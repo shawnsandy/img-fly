@@ -80,7 +80,7 @@ composer require league/glide-laravel
 * Display and resize an image from your `public/img` directory `w=500` sets the image width parameter to `500`. Read more on setting additional parameters (height, crop, orientation) [Glide quick reference](http://glide.thephpleague.com/1.0/api/quick-reference/).
 
 ``` html
-<img src="{{ Imgfly::imgPublic('hands.jpeg?w=500', 'img) }}" alt="">
+<img src="{{ Imgfly::imgPublic('hands.jpeg?w=500', 'img') }}" alt="">
 ```
 
 ### Presets
