@@ -21,7 +21,7 @@ class ImgFly
      */
     public function imgFly($image_str)
     {
-        return url('imgfly/images/' . $image_str);
+        return url(config("imgfly.routePrefix") . '/images/' . $image_str);
     }
 
     /**
@@ -33,7 +33,7 @@ class ImgFly
      */
     public function img($image_str)
     {
-        return url('imgfly/images/' . $image_str);
+        return url(config("imgfly.routePrefix") . '/images/' . $image_str);
     }
 
 
@@ -66,13 +66,13 @@ class ImgFly
      */
     public function loadImg($path, $image_string)
     {
-        $fullPath = "/imgfly";
-        if(strpos($path, "/" ) === 0)
+        $fullPath = "/" . config("imgfly.routePrefix");
+        if (strpos($path, "/") === 0)
             $fullPath .= $path;
         else
             $fullPath .= "/" . $path;
 
-        if(strpos($image_string, "/" ) === 0)
+        if (strpos($image_string, "/") === 0)
             $fullPath .= $image_string;
         else
             $fullPath .= "/" . $image_string;

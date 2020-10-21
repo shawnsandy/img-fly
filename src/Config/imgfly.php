@@ -12,4 +12,6 @@ return [
 
     "large" => "?w=1200&h=600&fit=crop-center",
 
+    "routePrefix" => "imgfly"
+
 ];
