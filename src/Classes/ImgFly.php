@@ -15,9 +15,9 @@ class ImgFly
     /**
      * Display images in storage/app
      *
-     * @deprecated v0.1beta use img()
      * @param [string] $image_str
      * @return void
+     * @deprecated v0.1beta use img()
      */
     public function imgFly($image_str)
     {
@@ -44,9 +44,17 @@ class ImgFly
      * @param string $dir
      * @return void
      */
-    public function imgPublic($image_str, $dir = 'img')
+    public function imgPublic($image_str, $dir = '')
     {
-        return $this->loadImg("public/$dir", $image_str);
+        $path = "public";
+        if (strlen($dir) > 0) {
+            if (strpos($dir, '/') === false)
+                $path .= "/" . $dir;
+            else
+                $path .= $dir;
+        }
+
+        return $this->loadImg($path, $image_str);
     }
 
     /**
@@ -54,7 +62,7 @@ class ImgFly
      *
      * @param string $path
      * @param string $image default path with url parameters
-     * @return void
+     * @return url
      */
     public function loadImg($path, $image_string)
     {
@@ -68,10 +76,9 @@ class ImgFly
      */
     public function imgPreset($img, $preset = 'small', $callBackMethod = 'img')
     {
-      $parameters = config("imgfly.{$preset}");
-      return  call_user_func([$this, $callBackMethod], $img.$parameters);
+        $parameters = config("imgfly.{$preset}");
+        return call_user_func([$this, $callBackMethod], $img . $parameters);
     }
-
 
 
 }
