@@ -48,7 +48,7 @@ class ImgFly
     {
         $path = "public";
         if (strlen($dir) > 0) {
-            if (strpos($dir, '/') === false)
+            if (strpos($dir, '/') == false)
                 $path .= "/" . $dir;
             else
                 $path .= $dir;
@@ -66,7 +66,19 @@ class ImgFly
      */
     public function loadImg($path, $image_string)
     {
-        return url("/imgfly/$path/$image_string");
+        $fullPath = "/imgfly";
+        if(strpos($path, "/" ) === 0)
+            $fullPath .= $path;
+        else
+            $fullPath .= "/" . $path;
+
+        if(strpos($image_string, "/" ) === 0)
+            $fullPath .= $image_string;
+        else
+            $fullPath .= "/" . $image_string;
+
+
+        return url($fullPath);
     }
 
     /**
