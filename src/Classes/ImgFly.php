@@ -89,6 +89,7 @@ class ImgFly
     public function imgPreset($img, $preset = 'small', $callBackMethod = 'img')
     {
         $parameters = config("imgfly.{$preset}");
+
         return call_user_func([$this, $callBackMethod], $img . $parameters);
     }
 
