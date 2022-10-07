@@ -45,7 +45,7 @@ class ImgflyServiceProvider extends ServiceProvider
             ]);
         }
 
-        $this->app->bind('Imgfly', function(){
+        $this->app->bind(ImgFly::class, function(){
             return new ImgFly();
         });
 

@@ -10,7 +10,7 @@ class ImgflyFacade extends Facade
 
 	protected static function getFacadeAccessor()
 	{
-		return new ImgFly();
+		return ImgFly::class;
 	}
 
 }
