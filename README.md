@@ -44,13 +44,13 @@ composer require shawnsandy/img-fly
 * Add the provider to your `config\app.php` providers.
 
 ```
-ShawnSandy\ImgFly\ImgflyServiceProvider::class,
+OtherCode\ImgFly\ImgflyServiceProvider::class,
 ```
 
 * Add the facade to your `config\app.php` alias.
 
 ```
-"Imgfly" => ShawnSandy\ImgFly\Classes\ImgflyFacade::class,
+"Imgfly" => OtherCode\ImgFly\Classes\ImgflyFacade::class,
 ```
 
 ### Routes

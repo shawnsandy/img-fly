@@ -1,38 +1,51 @@
 {
-    "name": "shawnsandy/img-fly",
-    "description": "Dynamically resize images on the Fly",
-    "license": "MIT",
-    "type": "library",
-    "require": {
-        "php": ">=7.0",
-        "illuminate/support": "5.*|6.*|7.*",
-        "league/glide-laravel": "1.*"
+  "name": "othercode/img-fly",
+  "description": "Dynamically resize images on the Fly",
+  "license": "MIT",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Shawn Sandy",
+      "email": "shawnsandy04@gmail.com",
+      "homepage": "https://github.com/shawnsandy",
+      "role": "Author"
     },
-    "author": {
-        "name": "shawn sandy ",
-        "email": "shawnsandy04@gmail.com"
-    },
-    "autoload": {
-        "psr-4": {
-            "ShawnSandy\\ImgFly\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "ShawnSandy\\ImgFly\\ImgflyServiceProvider"
-            ],
-            "aliases": {
-                "Imgfly": "ShawnSandy\\ImgFly\\Classes\\ImgflyFacade"
-            }
-        }
-    },
-    "config": {
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "optimize-autoloader": true
-    },
-    "require-dev": {
-        "phpstan/phpstan": "^0.9.0"
+    {
+      "name": "Unay Santistevan",
+      "email": "j.boggiano@seld.be",
+      "homepage": "https://othercode.io/",
+      "role": "Maintainer"
     }
+  ],
+  "autoload": {
+    "psr-4": {
+      "OtherCode\\ImgFly\\": "src/"
+    }
+  },
+  "require": {
+    "php": "^7.2.5|^8.0",
+    "illuminate/support": "*",
+    "league/glide-laravel": "^1.0.0"
+  },
+  "require-dev": {
+    "pestphp/pest": "^2.27"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "OtherCode\\ImgFly\\ImgFlyServiceProvider"
+      ],
+      "aliases": {
+        "Imgfly": "ImgFlyFacade"
+      }
+    }
+  },
+  "config": {
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
 }

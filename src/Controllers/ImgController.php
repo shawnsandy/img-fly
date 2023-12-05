@@ -1,6 +1,6 @@
 <?php
 
-namespace ShawnSandy\ImgFly\Controllers;
+namespace OtherCode\ImgFly\Controllers;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
